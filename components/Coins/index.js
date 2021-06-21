@@ -9,8 +9,7 @@ const Coins = ({
   volume,
   image,
   priceChange,
-  id,
-  lastUpdated
+  id
 }) => {
   return (
     <Link href='/coin/[id]' as={`/coin/${id}`}>
@@ -24,7 +23,7 @@ const Coins = ({
             </div>
             <div className={styles.coin_data}>
               <p className={styles.coin_price}>${price}</p>
-              <p className={styles.total_volume}>${volume.toLocaleString()}</p>
+              <p className={styles.coin_volume}>${volume.toLocaleString()}</p>
 
               {priceChange < 0 ? (
                 <p className={(styles.coin_percent, styles.red)}>
@@ -39,7 +38,6 @@ const Coins = ({
               <p className={styles.coin_marketcap}>
                 Mkt Cap: ${marketcap.toLocaleString()}
               </p>
-              {/* <p className="styles last_updated">{lastUpdated}</p> */}
             </div>
           </div>
         </div>
