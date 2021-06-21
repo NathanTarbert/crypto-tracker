@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     width: 300px;
+    color: #e2e2e2;
 }
 
 .coin_input {
@@ -13,6 +14,7 @@
     outline: none;
     height: 100%;
     width: 100%;
+    color: #e2e2e2;
 }
 
 .coin_input::placeholder {
