@@ -29,6 +29,38 @@
   }
   
   .coin_current {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     font-size: 2rem;
+  }
+
+  .coin_high_24h {
+    margin-bottom: 1rem;
+  }
+
+  .coin_price_change_24h {
+    margin-bottom: 1rem;
+  }
+
+  .red {
+    color: #f00606;
+    margin-bottom: 1rem;
+    border: solid;
+    border-color: #cebfbf;
+    margin-top: 7px;
+  }
+  
+  .green {
+    color: #13c783;
+    margin-bottom: 1rem;
+    border: solid;
+    border-color: #cebfbf;
+    
+  }
+
+  .coin_button {    
+    font-size: 30px;
+    border: solid;
+    border-color: #b60909;
+    border-radius: 10px;
+    background-color: rgb(29, 165, 199);
   }
