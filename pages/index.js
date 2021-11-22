@@ -9,7 +9,7 @@ import Layout from '../components/SearchBar/Layout';
     const [search, setSearch] = useState('');
   
     const allCoins = filteredCoins.filter(coin =>
-      coin.name.toLowerCase().includes(search.toLowerCase())
+      coin.name.toLowerCase().includes(search.toLowerCase()) || coin.symbol.toLowerCase().includes(search.toLowerCase())
     );
 
   const handleChange = e => {
@@ -29,7 +29,7 @@ import Layout from '../components/SearchBar/Layout';
 }
 
 export async function getServerSideProps() {
-  const res = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
+  const res = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=1000&page=1&sparkline=false')// https://www.coingecko.com/en/api#explore-api (Coins/markets)
 
   const filteredCoins = await res.json()
 

@@ -22,8 +22,8 @@ const Coins = ({
               <p className={styles.coin_symbol}>{symbol}</p>
             </div>
             <div className={styles.coin_data}>
-              <p className={styles.coin_price}>${price}</p>
-              <p className={styles.coin_volume}>${volume.toLocaleString()}</p>
+              <p className={styles.coin_price}>${price.toLocaleString()}</p>
+              <p className={styles.coin_volume}>{volume.toLocaleString()}</p>
 
               {priceChange < 0 ? (
                 <p className={(styles.coin_percent, styles.red)}>
