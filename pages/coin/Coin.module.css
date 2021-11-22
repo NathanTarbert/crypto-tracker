@@ -29,7 +29,7 @@
   }
   
   .coin_current {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-size: 2rem;
   }
 
@@ -54,13 +54,19 @@
     margin-bottom: 1rem;
     border: solid;
     border-color: #cebfbf;
-    
   }
 
-  .coin_button {    
-    font-size: 30px;
+  .coin_button { 
+    margin-right: 910px;
+    font-size: 40px;
     border: solid;
-    border-color: #b60909;
+    border-color: #90dfd8;
     border-radius: 10px;
-    background-color: rgb(29, 165, 199);
+    background-color: rgb(58, 137, 151);
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .coin_button:hover {     
+    background-color: rgb(5, 5, 5);
+    border-color: beige;
   }
