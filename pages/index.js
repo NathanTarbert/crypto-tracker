@@ -4,6 +4,7 @@ import Coins from '../components/Coins';
 import SearchBar from '../components/SearchBar';
 import Head from 'next/head';
 import Layout from '../components/SearchBar/Layout';
+import Navbar from '../components/Navbar';
 
   export default function Home({ filteredCoins }) {
     const [search, setSearch] = useState('');
@@ -23,6 +24,7 @@ import Layout from '../components/SearchBar/Layout';
     <div className='coin_app'>
       <SearchBar type='text' placeholder='Search' onChange={handleChange} />
       <CoinList filteredCoins={allCoins} />
+      <Navbar />
     </div>
   </Layout>
   )

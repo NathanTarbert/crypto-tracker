@@ -17,6 +17,7 @@
   }
   
   .coin_image {
+    display: flex;
     margin-bottom: 1rem;
   }
   
