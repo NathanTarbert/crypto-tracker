@@ -11,6 +11,12 @@ const Coins = ({
   priceChange,
   id
 }) => {
+
+  if(price > 0) {
+    let newPrice = price.toFixed(2);
+  } else {
+    let newPrice = price.toFixed(6);
+  }
   return (
     <Link href='/coin/[id]' as={`/coin/${id}`}>
       <a>
@@ -22,7 +28,7 @@ const Coins = ({
               <p className={styles.coin_symbol}>{symbol}</p>
             </div>
             <div className={styles.coin_data}>
-              <p className={styles.coin_price}>${price.toLocaleString()}</p>
+              <p className={styles.coin_price}>${newPrice.toLocaleString()}</p>
               <p className={styles.coin_volume}>{volume.toLocaleString()}</p>
 
               {priceChange < 0 ? (
