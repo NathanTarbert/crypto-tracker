@@ -24,7 +24,6 @@ import Navbar from '../components/Navbar';
     <div className='coin_app'>
       <SearchBar type='text' placeholder='Search' onChange={handleChange} />
       <CoinList filteredCoins={allCoins} />
-      <Navbar />
     </div>
   </Layout>
   )
