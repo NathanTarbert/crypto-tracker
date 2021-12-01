@@ -1,6 +1,7 @@
 .coin_search {
     margin-bottom: 64px;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     width: 300px;
     color: #e2e2e2;

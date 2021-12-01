@@ -1,4 +1,4 @@
-import Layout from '../../components/SearchBar/Layout';
+import Layout from '../../components/Layout';
 import styles from './Coin.module.css';
 import { useRouter } from "next/router";
 import Coins from '../../components/Coins';
@@ -8,9 +8,9 @@ const Coin = ({ coin }) => {
 
   return (
     <Layout>
-        <button className={styles.coin_button} type="button" onClick={() => router.push('/')}>
+        {/* <button className={styles.coin_button} type="button" onClick={() => router.push('/')}>
             Home
-        </button>
+        </button> */}
       <div className={styles.coin_page}>
         <div className={styles.coin_container}>
           <img
