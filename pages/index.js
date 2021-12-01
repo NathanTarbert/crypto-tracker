@@ -3,8 +3,7 @@ import CoinList from '../components/CoinList';
 import Coins from '../components/Coins';
 import SearchBar from '../components/SearchBar';
 import Head from 'next/head';
-import Layout from '../components/SearchBar/Layout';
-import Navbar from '../components/Navbar';
+import Layout from '../components/Layout';
 
   export default function Home({ filteredCoins }) {
     const [search, setSearch] = useState('');
@@ -21,16 +20,16 @@ import Navbar from '../components/Navbar';
 
   return (
     <Layout>
-    <div className='coin_app'>
-      <SearchBar type='text' placeholder='Search' onChange={handleChange} />
-      <CoinList filteredCoins={allCoins} />
-    </div>
-  </Layout>
+      <div className='coin_app'>
+        <SearchBar type='text' placeholder='Search' onChange={handleChange} />
+        <CoinList filteredCoins={allCoins} />
+      </div>
+    </Layout>
   )
 }
 
 export async function getServerSideProps() {
-  const res = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=1000&page=1&sparkline=false')// https://www.coingecko.com/en/api#explore-api (Coins/markets)
+  const res = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false')// https://www.coingecko.com/en/api#explore-api (Coins/markets)
 
   const filteredCoins = await res.json()
 

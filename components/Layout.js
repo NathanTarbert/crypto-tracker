@@ -1,8 +1,11 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Nav from './Nav';
 
 const Layout = ({ children, title = 'Crypto Tracker' }) => {
   return (
+    <>
+    <Nav />
     <div className='layout'>
       <Head>
         <title>{title}</title>
@@ -11,12 +14,13 @@ const Layout = ({ children, title = 'Crypto Tracker' }) => {
       <header className='header'>
         <Link href='/' passHref>
           <a>
-            <img src="/octo-logo-smaller.png" alt="crypto-tracker-logo" />
+            <img src="/octo-logo.png" alt="crypto-tracker-logo" />
           </a>
         </Link>
       </header>
       <main>{children}</main>
     </div>
+    </>
   );
 };
 
