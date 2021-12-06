@@ -1,12 +1,12 @@
 import Layout from '../../components/Layout';
 import styles from './Coin.module.css';
 import { useRouter } from "next/router";
-import Coins from '../../components/Coins';
 
 const Coin = ({ coin }) => {
     const router = useRouter();
 
   return (
+
     <Layout>
         {/* <button className={styles.coin_button} type="button" onClick={() => router.push('/')}>
             Home
@@ -28,11 +28,11 @@ const Coin = ({ coin }) => {
                 <p className={(styles.coin_price_change_24h, styles.red)}>
                   $ {coin.market_data.price_change_24h.toFixed(2)}
                 </p>
-              ) : (
+          ) : (
                 <p className={(styles.coin_price_change_24h, styles.green)}>
                   $ {coin.market_data.price_change_24h.toFixed(2)}
                 </p>
-              )}
+          )}
 
           {/* <p className={styles.coin_price_change_24h}>
             {coin.market_data.price_change_24h.toFixed(3)} %
@@ -43,9 +43,12 @@ const Coin = ({ coin }) => {
           <p className={styles.coin_low_24h}>
               24hr Low $ {coin.market_data.low_24h.usd.toFixed(2)}
           </p>
+           <button className={styles.coin_button} type="button" onClick={() => router.push('/watchlist')}>
+           Add to Watchlist
+          </button>
         </div>
       </div>
-    </Layout>
+    </Layout>    
   );
 };
 

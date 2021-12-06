@@ -1,14 +1,17 @@
 .nav {
-    height: 100;
-    margin-top: 0px;
+    height: 50;
+    margin-top: 5px;
     margin-left: 5px;
     margin-right: 5px;
-    padding: 15px;
-    background-color: rgb(117, 115, 115);
-    color: rgb(14, 13, 13);
+    padding: 5px;
+    background-color: rgb(133, 241, 205);
+    color: rgb(10, 10, 10);
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    border-radius: 50px;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .nav ul {

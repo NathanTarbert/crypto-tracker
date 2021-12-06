@@ -12,7 +12,7 @@
     align-items: center;
     border: 1px solid #2fffe5;
     border-radius: 10px;
-    padding: 2rem;
+    padding: 4rem;
     width: 400px;
   }
   
@@ -22,7 +22,7 @@
   }
   
   .coin_name {
-    margin-bottom: 1rem;
+    margin-bottom: none;
   }
   
   .coin_ticker {
@@ -58,8 +58,8 @@
   }
 
   .coin_button { 
-    margin-right: 910px;
-    font-size: 40px;
+    margin-top: 10px;
+    font-size: 22px;
     border: solid;
     border-color: #90dfd8;
     border-radius: 10px;
@@ -68,6 +68,6 @@
   }
 
   .coin_button:hover {     
-    background-color: rgb(5, 5, 5);
+    background-color: rgb(172, 168, 168);
     border-color: beige;
   }
