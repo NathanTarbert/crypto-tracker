@@ -10,20 +10,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid #2fffe5;
+    border: 1px solid #f9fcfb;
     border-radius: 10px;
     padding: 4rem;
     width: 340px;
-    margin-top: 15rem;
+    margin-top: 5rem;
   }
   
   .coin_image {
     display: flex;
     margin-bottom: 1rem;
+    height: 100px;
+    width: 100px;
   }
   
   .coin_name {
     margin-bottom: none;
+    font-size: 24px;
   }
   
   .coin_ticker {
@@ -32,7 +35,7 @@
   
   .coin_current {
     margin-bottom: 0rem;
-    font-size: 2rem;
+    font-size: 28px;
   }
 
   /* .coin_high_24h {
@@ -60,11 +63,12 @@
 
   .coin_button { 
     margin-top: 10px;
-    font-size: 22px;
+    font-size: 18px;
+    padding: 3px;
     border: solid;
-    border-color: #90dfd8;
+    border-color: #b3b4b4;
     border-radius: 10px;
-    background-color: rgb(58, 137, 151);
+    background-color: rgb(246, 251, 252);
     font-family: 'Roboto', sans-serif;
   }
 

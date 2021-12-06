@@ -7,7 +7,7 @@ function Nav() {
             <div className="octo">
                 <Link href='/' passHref>
                     <a>
-                        <img src='/rocket.png' alt="crypto-tracker-logo" />
+                        <img src='/rocket1.png' alt="crypto-tracker-logo" />
                     </a>
                 </Link>
             </div>
