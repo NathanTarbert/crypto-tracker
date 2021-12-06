@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import Nav from './Nav';
+
 
 const Layout = ({ children, title = 'Crypto Tracker' }) => {
   return (
@@ -11,12 +11,7 @@ const Layout = ({ children, title = 'Crypto Tracker' }) => {
         <title>{title}</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <header className='header'>
-        <Link href='/' passHref>
-          <a>
-            <img src="/octo-logo.png" alt="crypto-tracker-logo" />
-          </a>
-        </Link>
+      <header className='header'>       
       </header>
       <main>{children}</main>
     </div>

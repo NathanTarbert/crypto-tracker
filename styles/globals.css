@@ -50,11 +50,23 @@ a {
   margin: 50px;
 }
 
-h1 {
+.aboutTitle {
   color:rgb(39, 39, 219);
   align-items: center;
 }
 
+h1 {
+  color: white;
+  text-align: center;
+}
+
 p {
-  color: rgb(181, 181, 238);
+  padding: 1rem;
+  color: rgb(199, 199, 204);
+  max-width: 1536px;
+  text-align: center;
+}
+
+.octo {
+  margin-left: 500;
 }
