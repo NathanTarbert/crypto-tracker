@@ -12,7 +12,7 @@ const Watchlist = ({ coins, favCoins, removeCoin }) => {
     const filteredCoins = coins.filter(({ id: name1 }) => favCoins.some(({ id: name2 }) => name1 === name2));
     // console.log("filtered coins ", filteredCoins);
 
-    const handleClick = (id) => {
+    const handleClick = (id) => {//this is calling a function from _App.js which is grabbing a coin by id to remove
         // console.log(id);
         removeCoin(id);
     };
