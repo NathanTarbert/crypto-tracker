@@ -4,6 +4,7 @@ import Coins from '../components/Coins';
 import SearchBar from '../components/SearchBar';
 import Head from 'next/head';
 import Layout from '../components/Layout';
+import Coin from './coin/[id]';
 
   export default function Home({ filteredCoins }) {
     const [search, setSearch] = useState('');
@@ -16,6 +17,14 @@ import Layout from '../components/Layout';
     e.preventDefault();
 
     setSearch(e.target.value.toLowerCase());
+  };
+
+  //create array to hold watched coins and update watched coins
+  const [watchedCoins, setWatchedCoins] = useState([]);
+  const addCoin = (name) => {
+      setWatchedCoins((currentCoins) => {
+        return [...currentCoins, name];
+      });
   };
 
   return (

@@ -1,9 +1,32 @@
 import Layout from '../../components/Layout';
 import styles from './Coin.module.css';
 import { useRouter } from "next/router";
+import React from 'react';
+import { useState } from 'react';
+import { addCoin } from '../index';
 
-const Coin = ({ coin }) => {
+//destructure function/prop addCoin from index page
+const Coin = ({ coin, addCoin }) => {
     const router = useRouter();
+
+    const [isWatch, setWatch] = useState(false);
+    const [coinId, setCoinId] = useState(null);
+    // console.log(isWatch);
+
+    const handleClick = (name) => {
+      console.log(name);
+      setWatch(true);
+      // console.log(isWatch);
+      setCoinId(name);
+      //this calls the addCoin function imported from index page, adding the coin to the array held there
+      // addCoin(name);
+    };
+
+    const handleHome = (name) => {
+      setWatch(true);
+      // console.log(isWatch);
+      router.push("/");
+    };
 
   return (
 
@@ -43,9 +66,19 @@ const Coin = ({ coin }) => {
           <p className={styles.coin_low_24h}>
               24hr Low $ {coin.market_data.low_24h.usd.toFixed(2)}
           </p>
-           <button className={styles.coin_button} type="button" onClick={() => router.push('/watchlist')}>
+           {!isWatch && (
+           <div>
+           <button className={styles.coin_button} type="button" onClick={() => handleClick(coin.name)}>
            Add to Watchlist
           </button>
+          </div>)}
+          {isWatch && (
+           <div>
+           <p>{coinId} has been added to your Watchlist!</p>
+           <button className={styles.coin_button2} type="button" onClick={() => handleHome(coin.name)}>
+           Home
+          </button>
+          </div>)}
         </div>
       </div>
     </Layout>    

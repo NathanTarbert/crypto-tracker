@@ -72,6 +72,19 @@
     font-family: 'Roboto', sans-serif;
   }
 
+    .coin_button2 { 
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    padding: 3px;
+    border: solid;
+    border-color: #b3b4b4;
+    border-radius: 10px;
+    background-color: rgb(246, 251, 252);
+    font-family: 'Roboto', sans-serif;
+  }
+
   .coin_button:hover {     
     background-color: rgb(172, 168, 168);
     border-color: beige;

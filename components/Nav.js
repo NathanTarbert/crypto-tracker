@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import navStyles from '../styles/Nav.module.css';
+import Watchlist from '../pages/watchlist';
 
 function Nav() {
     return (
