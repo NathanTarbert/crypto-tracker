@@ -6,8 +6,9 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 import Coin from './coin/[id]';
 
-  export default function Home({ filteredCoins }) {
+  export default function Home({ filteredCoins, favCoins }) {
     const [search, setSearch] = useState('');
+    console.log(favCoins);
   
     const allCoins = filteredCoins.filter(coin =>
       coin.name.toLowerCase().includes(search.toLowerCase()) || coin.symbol.toLowerCase().includes(search.toLowerCase())
@@ -27,13 +28,11 @@ import Coin from './coin/[id]';
       });
   };
 
-  return (
-    <Layout>
+  return (    
       <div className='coin_app'>
         <SearchBar type='text' placeholder='Search' onChange={handleChange} />
         <CoinList filteredCoins={allCoins} />
-      </div>
-    </Layout>
+      </div>    
   )
 }
 

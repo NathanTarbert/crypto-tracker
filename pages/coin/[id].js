@@ -6,34 +6,27 @@ import { useState } from 'react';
 import { addCoin } from '../index';
 
 //destructure function/prop addCoin from index page
-const Coin = ({ coin, addCoin }) => {
+const Coin = ({ coin, favCoin, addCoin }) => {
     const router = useRouter();
+    console.log(favCoin);
 
     const [isWatch, setWatch] = useState(false);
-    const [coinId, setCoinId] = useState(null);
-    // console.log(isWatch);
+    // const [coinId, setCoinId] = useState(null);
 
-    const handleClick = (name) => {
-      console.log(name);
-      setWatch(true);
-      // console.log(isWatch);
-      setCoinId(name);
-      //this calls the addCoin function imported from index page, adding the coin to the array held there
-      // addCoin(name);
-    };
+    // const handleClick = (coin) => {
+    //   console.log(coin);
+    //   setWatch(true);
+    // };
 
-    const handleHome = (name) => {
-      setWatch(true);
-      // console.log(isWatch);
+    //resets add to fav button, adds coin to array, sends user back to list page
+    const handleClose = () => {
+      setWatch(false);
+      addCoin({id: coin.id});
       router.push("/");
     };
 
   return (
 
-    <Layout>
-        {/* <button className={styles.coin_button} type="button" onClick={() => router.push('/')}>
-            Home
-        </button> */}
       <div className={styles.coin_page}>
         <div className={styles.coin_container}>
           <img
@@ -66,22 +59,24 @@ const Coin = ({ coin, addCoin }) => {
           <p className={styles.coin_low_24h}>
               24hr Low $ {coin.market_data.low_24h.usd.toFixed(2)}
           </p>
+           {/* {show or hide buttons according to setting coin to watchlist} */}
            {!isWatch && (
-           <div>
-           <button className={styles.coin_button} type="button" onClick={() => handleClick(coin.name)}>
+              //if isWatch is false, then then show button to add (default)
+           <div>             
+           <button className={styles.coin_button} type="button" onClick={() => setWatch(true)}>
            Add to Watchlist
           </button>
           </div>)}
           {isWatch && (
+            //if isWatch is true, then text is displayed
            <div>
-           <p>{coinId} has been added to your Watchlist!</p>
-           <button className={styles.coin_button2} type="button" onClick={() => handleHome(coin.name)}>
+           <p>{coin.name} has been added to your Watchlist!</p>
+           <button className={styles.coin_button2} type="button" onClick={handleClose}>
            Home
           </button>
           </div>)}
         </div>
-      </div>
-    </Layout>    
+      </div>  
   );
 };
 
