@@ -8,20 +8,19 @@ import { addCoin } from '../index';
 //destructure function/prop addCoin from index page
 const Coin = ({ coin, favCoin, addCoin }) => {
     const router = useRouter();
-    console.log(favCoin);
+   
 
     const [isWatch, setWatch] = useState(false);
     // const [coinId, setCoinId] = useState(null);
 
-    // const handleClick = (coin) => {
-    //   console.log(coin);
-    //   setWatch(true);
-    // };
-
+  const addToWatch = () => {
+      setWatch(true);
+      addCoin({id: coin.id});    
+  };
+   
     //resets add to fav button, adds coin to array, sends user back to list page
     const handleClose = () => {
       setWatch(false);
-      addCoin({id: coin.id});
       router.push("/");
     };
 
@@ -63,7 +62,7 @@ const Coin = ({ coin, favCoin, addCoin }) => {
            {!isWatch && (
               //if isWatch is false, then then show button to add (default)
            <div>             
-           <button className={styles.coin_button} type="button" onClick={() => setWatch(true)}>
+           <button className={styles.coin_button} type="button" onClick={addToWatch}>
            Add to Watchlist
           </button>
           </div>)}
