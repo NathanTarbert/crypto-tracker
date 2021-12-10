@@ -20,7 +20,7 @@ const Watchlist = ({ coins, favCoins, removeCoin }) => {
 
     return (
              <div>
-      <h1>All Coins</h1>
+      <h1 className={styles.h1}>Welcome to your watchlist</h1><br></br><br></br>
 
       {filteredCoins.map(coin => (
         

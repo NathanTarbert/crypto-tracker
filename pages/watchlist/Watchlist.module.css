@@ -2,6 +2,10 @@
     display: flex;
     justify-content: center;
   }
+
+  .h1 {
+    margin-top: 20px;
+  }
   
   .coin_row {
     display: flex;
