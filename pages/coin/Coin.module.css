@@ -72,6 +72,19 @@
     font-family: 'Roboto', sans-serif;
   }
 
+  .back_button {
+    margin-top: none;
+    font-size: 18px;
+    padding: 3px;
+    margin-bottom: 5px;
+    margin-right: 250px;
+    border: solid;
+    border-color: #b3b4b4;
+    border-radius: 5px;
+    background-color: rgb(246, 251, 252);
+    font-family: 'Roboto', sans-serif;
+  }
+
     .coin_button2 { 
     margin-left: 70px;
     display: flex;

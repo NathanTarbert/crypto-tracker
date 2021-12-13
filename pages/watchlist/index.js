@@ -41,27 +41,27 @@ const Watchlist = ({ coins, favCoins, removeCoin }) => {
                     )}
                     <p>Last 24hrs</p>
                     {coin.price_change_24h < 0 ? (
-                    <p className={(styles.coin_price_change_24h, styles.red)}>
+                    <p className={(styles.coin_price_change_24h, styles.red)}>Down
                       ${coin.price_change_24h.toFixed(2)}
                     </p>
                     ) : (
-                    <p className={(styles.coin_price_change_24h, styles.green)}>
+                    <p className={(styles.coin_price_change_24h, styles.green)}>Up
                       ${coin.price_change_24h.toFixed(2)}
                     </p>
                     )}
-                    <p className={styles.coin_high_24h}>
+                    <p className={styles.coin_high_24h, styles.green}>
                         24hr High ${coin.high_24h.toFixed(2)}
                     </p>
-                    <p className={styles.coin_low_24h}>
+                    <p className={styles.coin_low_24h, styles.red}>
                         24hr Low ${coin.low_24h.toFixed(2)}
                     </p>
                 </div>
               </div>
-              <button className={styles.remove_button} onClick={() => handleClick(coin.id)}>Remove</button>
+                <button className={styles.remove_button} onClick={() => handleClick(coin.id)}>Remove</button>
             </div>
       ))}
     </div>
-  );
+    );
 };
 
 export default Watchlist;
