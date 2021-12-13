@@ -1,12 +1,13 @@
 import React from 'react';
 import Layout from '../../components/Layout';
+import Link from 'next/link';
 import styles from './Coin.module.css';
 import { useRouter } from "next/router";
 import { useState } from 'react';
 import { addCoin } from '../index';
 
 //destructure function/prop addCoin from index page
-const Coin = ({ coin, favCoins, addCoin }) => {
+const Coin = ({ coin, addCoin }) => {
     const router = useRouter();
    
 
@@ -28,27 +29,39 @@ const Coin = ({ coin, favCoins, addCoin }) => {
   return (
 
       <div className={styles.coin_page}>
+        
         <div className={styles.coin_container}>
-          <img
+          <button className={styles.back_button}>
+            <Link href='/'>Back</Link>
+          </button>
+          <img  
             src={coin.image.large}
             alt={coin.name}
             className={styles.coin_image}
           />
           <h1 className={styles.coin_name}>{coin.name}</h1>
           <p className={styles.coin_ticker}>{coin.symbol.toUpperCase()}</p>
-          <p className={styles.coin_current}>
-            ${coin.market_data.current_price.usd}
-          </p>
+
+          {/* {coin.market_data.current_price.usd < 0 ? ( */}
+            <p className={styles.coin_current}>
+              ${coin.market_data.current_price.usd}
+            </p>
+          {/* // ) : (
+          //    <p className={styles.coin_current}>
+          //     ${coin.market_data.current_price.usd.toFixed(2)}
+          //   </p>
+          // )} */}
+          
 
           {coin.market_data.price_change_24h < 0 ? (
-                <p className={(styles.coin_price_change_24h, styles.red)}>
-                  $ {coin.market_data.price_change_24h.toFixed(2)}
-                </p>
-          ) : (
-                <p className={(styles.coin_price_change_24h, styles.green)}>
-                  $ {coin.market_data.price_change_24h.toFixed(2)}
-                </p>
-          )}
+              <p className={(styles.coin_price_change_24h, styles.red)}>
+                $ {coin.market_data.price_change_24h.toFixed(2)}
+              </p>
+              ) : (
+              <p className={(styles.coin_price_change_24h, styles.green)}>
+                $ {coin.market_data.price_change_24h.toFixed(2)}
+              </p>
+              )}
 
           {/* <p className={styles.coin_price_change_24h}>
             {coin.market_data.price_change_24h.toFixed(3)} %
@@ -72,9 +85,9 @@ const Coin = ({ coin, favCoins, addCoin }) => {
             //if isWatch is true, then text is displayed
            <div>
            <p>{coin.name} has been added to your Watchlist!</p>
-           {/* <button className={styles.coin_button2} type="button" onClick={handleClose}>
-           Home
-          </button> */}
+            {/* <button className={styles.coin_button2} type="button" onClick={handleClose}>
+            Home
+            </button> */}
           </div>
           )}
         </div>

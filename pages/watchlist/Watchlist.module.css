@@ -8,9 +8,9 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  height: 80px;
+  height: 90px;
   border-bottom: 1px solid #2e2e2e;
-  width: 1000px;
+  width: 1150px;
   padding: 0rem 2rem;
 }
 
@@ -40,7 +40,8 @@
 }
 
 .coin_change_24_hrs {
-  width: 110px;
+  width: 150px;
+  background-color: white;
 }
 
 .coin_data {
@@ -51,7 +52,7 @@
 }
 
 .coin_price {
-  width: 110px;
+  width: 180px;
 }
 
 .coin_volume {
@@ -63,7 +64,7 @@
 }
 
 .coin_percent {
-  width: 100px;
+  width: 150px;
 }
 
 .remove_button {
@@ -76,13 +77,15 @@
 }
 
 .coin_price_change_24h {
-  width: 110px;
+  width: 120px;
 }
 
 .red {
   color: #f00606;
+  width: 130px;
 }
 
 .green {
   color: #13c783;
+  width: 130px;
 }
