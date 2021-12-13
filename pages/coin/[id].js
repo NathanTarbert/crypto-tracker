@@ -1,12 +1,12 @@
+import React from 'react';
 import Layout from '../../components/Layout';
 import styles from './Coin.module.css';
 import { useRouter } from "next/router";
-import React from 'react';
 import { useState } from 'react';
 import { addCoin } from '../index';
 
 //destructure function/prop addCoin from index page
-const Coin = ({ coin, favCoin, addCoin }) => {
+const Coin = ({ coin, favCoins, addCoin }) => {
     const router = useRouter();
    
 
@@ -15,7 +15,8 @@ const Coin = ({ coin, favCoin, addCoin }) => {
 
   const addToWatch = () => {
       setWatch(true);
-      addCoin({id: coin.id});    
+      addCoin({id: coin.id});   
+      console.log("id page: ", coin); 
   };
    
     //resets add to fav button, adds coin to array, sends user back to list page
@@ -36,7 +37,7 @@ const Coin = ({ coin, favCoin, addCoin }) => {
           <h1 className={styles.coin_name}>{coin.name}</h1>
           <p className={styles.coin_ticker}>{coin.symbol.toUpperCase()}</p>
           <p className={styles.coin_current}>
-            ${coin.market_data.current_price.usd.toFixed(2)}
+            ${coin.market_data.current_price.usd}
           </p>
 
           {coin.market_data.price_change_24h < 0 ? (
@@ -65,15 +66,17 @@ const Coin = ({ coin, favCoin, addCoin }) => {
            <button className={styles.coin_button} type="button" onClick={addToWatch}>
            Add to Watchlist
           </button>
-          </div>)}
+          </div>          
+          )}
           {isWatch && (
             //if isWatch is true, then text is displayed
            <div>
            <p>{coin.name} has been added to your Watchlist!</p>
-           <button className={styles.coin_button2} type="button" onClick={handleClose}>
+           {/* <button className={styles.coin_button2} type="button" onClick={handleClose}>
            Home
-          </button>
-          </div>)}
+          </button> */}
+          </div>
+          )}
         </div>
       </div>  
   );

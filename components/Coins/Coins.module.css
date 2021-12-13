@@ -10,7 +10,7 @@
     align-items: center;
     height: 80px;
     border-bottom: 1px solid #2e2e2e;
-    width: 1000px;
+    width: 1050px;
     padding: 0rem 2rem;
   }
   
@@ -25,12 +25,14 @@
   }
   
   .coin_img {
+    display: flex;
     height: 30px;
     width: 30px;
     margin-right: 10px;
   }
   
   .coin_h1 {
+    text-align: center;
     font-size: 16px;
     width: 150px;
   }
@@ -47,11 +49,11 @@
   }
   
   .coin_price {
-    width: 110px;
+    width: 120px;
   }
   
   .coin_volume {
-    width: 155px;
+    width: 145px;
   }
   
   .coin_marketcap {

@@ -29,7 +29,7 @@ import Coin from './coin/[id]';
   };
 
   return (    
-      <div className='coin_app'>
+      <div className={'coin_app'}>
         <SearchBar type='text' placeholder='Search' onChange={handleChange} />
         <CoinList filteredCoins={allCoins} />
       </div>    
