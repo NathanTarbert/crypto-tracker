@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import navStyles from '../styles/Nav.module.css';
 import Watchlist from '../pages/watchlist';
+import { Container } from 'react-bootstrap';
 
 function Nav() {
     return (
@@ -26,9 +27,16 @@ function Nav() {
                 
             </ul> 
             <ul >
-                <li style={{ textAlign: 'right'}}>
+                <li>
                     <Link href='/docs'>Docs</Link>
                 </li>
+                
+            </ul>
+            <ul >
+                <li>
+                    <h1 style={navStyles.h1}>Crypto Tracker</h1>
+                </li>
+                
             </ul>
             
         </nav>

@@ -1,6 +1,7 @@
 .coin_container {
     display: flex;
     justify-content: center;
+    background-color: black;
 }
   
 .coin_row {
