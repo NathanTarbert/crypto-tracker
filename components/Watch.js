@@ -4,7 +4,7 @@ import styles from '../pages/watchlist/Watchlist.module.css';
 
 function Watch( coins, favCoins, removeCoin ) {
     
-    const filteredCoins = coins.filter(({ id: name1 }) => favCoins.some(({ id: name2 }) => name1 === name2));
+    const filteredCoins = coins.filter(({ id: name1 }) => favCoins.some(({ id: name2 }) => name1 === name2));//filter through the array so we can delete
 
     return (    
         <div>
