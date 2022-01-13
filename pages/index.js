@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import CoinList from '../components/CoinList';
 import Coins from '../components/Coins';
 import SearchBar from '../components/SearchBar';
@@ -6,44 +6,48 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 import Coin from './coin/[id]';
 
-  export default function Home({ filteredCoins, favCoins }) {
-    const [search, setSearch] = useState('');
-    console.log(favCoins);
-  
-    const allCoins = filteredCoins.filter(coin =>
-      coin.name.toLowerCase().includes(search.toLowerCase()) || coin.symbol.toLowerCase().includes(search.toLowerCase())
-    );
+export default function Home({ filteredCoins, favCoins }) {
+	const [ search, setSearch ] = useState('');
+	console.log(favCoins);
 
-  const handleChange = e => {
-    e.preventDefault();
+	const allCoins = filteredCoins.filter(
+		(coin) =>
+			coin.name.toLowerCase().includes(search.toLowerCase()) ||
+			coin.symbol.toLowerCase().includes(search.toLowerCase())
+	);
 
-    setSearch(e.target.value.toLowerCase());
-  };
+	const handleChange = (e) => {
+		e.preventDefault();
 
-  //create array to hold watched coins and update watched coins
-  const [watchedCoins, setWatchedCoins] = useState([]);
-  const addCoin = (name) => {
-      setWatchedCoins((currentCoins) => {
-        return [...currentCoins, name];
-      });
-  };
+		setSearch(e.target.value.toLowerCase());
+	};
 
-  return (    
-      <div className={'coin_app'}>
-        <SearchBar type='text' placeholder='Search' onChange={handleChange} />
-        <CoinList filteredCoins={allCoins} />
-      </div>    
-  )
+	//create array to hold watched coins and update watched coins
+	const [ watchedCoins, setWatchedCoins ] = useState([]);
+	const addCoin = (name) => {
+		setWatchedCoins((currentCoins) => {
+			return [ ...currentCoins, name ];
+		});
+	};
+
+	return (
+		<div className={'coin_app'}>
+			<SearchBar type="text" placeholder="Search" onChange={handleChange} />
+			<CoinList filteredCoins={allCoins} />
+		</div>
+	);
 }
 
 export async function getServerSideProps() {
-  const res = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=200&page=1&sparkline=false')// https://www.coingecko.com/en/api#explore-api (Coins/markets)
+	const res = await fetch(
+		'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=200&page=1&sparkline=false'
+	); // https://www.coingecko.com/en/api#explore-api (Coins/markets)
 
-  const filteredCoins = await res.json()
+	const filteredCoins = await res.json();
 
-  return {
-    props: {
-      filteredCoins,
-    }
-  }
+	return {
+		props: {
+			filteredCoins
+		}
+	};
 }
