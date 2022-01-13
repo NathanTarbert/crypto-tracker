@@ -25,6 +25,11 @@ function Nav() {
                 </li>
                 
             </ul> 
+            <ul >
+                <li style={{ textAlign: 'right'}}>
+                    <Link href='/docs'>Docs</Link>
+                </li>
+            </ul>
             
         </nav>
     )
