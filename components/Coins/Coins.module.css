@@ -1,9 +1,8 @@
-
-
 .coin_container {
     display: flex;
     justify-content: center;
-    background-color: #161818;
+    background-color: #1d2424;
+    border-radius: 5px;
   }
   
   .coin_row {
@@ -12,7 +11,7 @@
     justify-content: flex-start;
     align-items: center;
     height: 80px;
-    border-bottom: 1px solid #2e2e2e;
+    border-bottom: 1px solid #575a5a;
     width: 1050px;
     padding: 0rem 2rem;
   }
@@ -28,7 +27,6 @@
   }
   
   .coin_img {
-    display: flex;
     height: 30px;
     width: 30px;
     margin-right: 10px;

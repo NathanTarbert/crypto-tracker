@@ -1,38 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
 .nav {
-    height: 50;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
     margin-top: 5px;
-    /* margin-left: 5px; */
-    /* margin-right: 5px; */
     padding: 1px;
     background-color: white;
     color: rgb(10, 10, 10);
-    display: flex;
     align-items: center; 
-    /* justify-content: flex-start; */
-    /* border-radius: 50px;  */
     font-size: 19px;
     font-weight: bold;
 }
 
 .nav ul {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     text-align: center;
     list-style: none;
 }
 
 .nav ul li a {
+    display: flex;
     margin: 5px 15px;    
 }
 
 .nav h1 {
+    display:flex;
+    justify-content:center;
+    align-items:end;
     font-family: 'Acme', sans-serif;
     font-weight: bolder;
     font-size: 40px;
-    color: #021c1c;
-    margin-left: 19rem;
+    color: #010e0e;
+    text-align: center;
 }
 
 
