@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from 'react';
-import styles from '../pages/watchlist/Watchlist.module.css';
+import styles from './Coins.module.css';
 
 function Watch( coins, favCoins, removeCoin ) {
     
