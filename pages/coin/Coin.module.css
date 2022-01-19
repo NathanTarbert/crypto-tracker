@@ -8,7 +8,7 @@
   .coin_container {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(90deg, rgba(11,13,75,1) 0%, rgba(16,17,42,1) 100%);
+    background: linear-gradient(90deg, rgb(9, 13, 110) 0%, rgba(16,17,42,1) 100%);
     justify-content: center;
     align-items: center;
     border: 1px solid #f9fcfb;
@@ -19,7 +19,7 @@
   }
   
   .coin_image {
-    display: flex;
+    /* display: flex; */
     margin-bottom: 1rem;
     height: 100px;
     width: 100px;
