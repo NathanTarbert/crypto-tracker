@@ -6,7 +6,7 @@ export default function about() {
 		<div className="container">
 			<h1 className="text-center">What is Crypto Currency?</h1>
 			<br />
-			<Container>
+			<Container style={{display: 'flex'}}>
 				<Row>
 					<Col style={{ backgroundColor: 'white', paddig: '1rem' }}>
 						<p style={{ color: 'black' }}>

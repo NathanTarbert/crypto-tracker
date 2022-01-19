@@ -73,3 +73,10 @@ p {
 .octo {
   margin-left: 500;
 }
+
+.docs {
+  display: block;
+  text-align: center;
+  padding: 100px
+}
+
