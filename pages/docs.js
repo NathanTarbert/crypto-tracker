@@ -15,8 +15,8 @@ export default function Docs() {
             mode="normal"
             background="transparent"  speed="1"  style="width: 300px; height: 300px;" 
             src="https://assets6.lottiefiles.com/packages/lf20_hjnzpe2w.json"
-            style={{ hieght: '200px', width: '200px' }}
-          ></lottie-player>    
+            style={{ hieght: '200px', width: '200px' }}>
+          </lottie-player>    
           <h1>Welcome to the docs</h1>
           <p>This page is under construction</p>
           

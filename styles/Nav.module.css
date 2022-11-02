@@ -29,7 +29,7 @@
 .nav h1 {
     display:flex;
     justify-content:center;
-    align-items:end;
+    align-items:flex-end;
     font-family: 'Acme', sans-serif;
     font-weight: bolder;
     font-size: 40px;

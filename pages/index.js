@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import CoinList from '../components/CoinList';
-import Coins from '../components/Coins';
 import SearchBar from '../components/SearchBar';
-import Head from 'next/head';
-import Layout from '../components/Layout';
-import Coin from './coin/[id]';
+//import Coins from '../components/Coins';
+//import Head from 'next/head';
+//import Layout from '../components/Layout';
+//import Coin from './coin/[id]';
 
 export default function Home({ filteredCoins, favCoins }) {
 	const [ search, setSearch ] = useState('');
